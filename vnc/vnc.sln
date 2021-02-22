@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Xregion", "..\common\Xregion\Xregion.vcxproj", "{597421F1-8544-4198-B498-540361A51BE0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "network", "..\common\network\network.vcxproj", "{6001F642-84E6-448F-9D69-C1F540291186}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rdr", "..\common\rdr\rdr.vcxproj", "{24E0C894-0886-49F1-80C0-DE306A1CD0C3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rfb", "..\common\rfb\rfb.vcxproj", "{5F0B1D1B-306D-4D7F-AB22-DCF01632B73B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "rfb_win32", "rfb_win32\rfb_win32.vcxproj", "{B8FEB3F1-D554-4AC2-9E59-F9792F31E8CE}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hiravncviewer", "vncviewer\vncviewer.vcxproj", "{DBB955AF-768C-4121-A2A1-30012B9FF417}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "zlib", "..\common\zlib\zlib.vcxproj", "{3E0AC723-BDE7-45AC-ABD8-B05AA5642EAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Unicode|Win32 = Debug_Unicode|Win32
+		Release_Unicode|Win32 = Release_Unicode|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{597421F1-8544-4198-B498-540361A51BE0}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{597421F1-8544-4198-B498-540361A51BE0}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{597421F1-8544-4198-B498-540361A51BE0}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{597421F1-8544-4198-B498-540361A51BE0}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{6001F642-84E6-448F-9D69-C1F540291186}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{6001F642-84E6-448F-9D69-C1F540291186}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{6001F642-84E6-448F-9D69-C1F540291186}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{6001F642-84E6-448F-9D69-C1F540291186}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{24E0C894-0886-49F1-80C0-DE306A1CD0C3}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{24E0C894-0886-49F1-80C0-DE306A1CD0C3}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{24E0C894-0886-49F1-80C0-DE306A1CD0C3}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{24E0C894-0886-49F1-80C0-DE306A1CD0C3}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{5F0B1D1B-306D-4D7F-AB22-DCF01632B73B}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{5F0B1D1B-306D-4D7F-AB22-DCF01632B73B}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{5F0B1D1B-306D-4D7F-AB22-DCF01632B73B}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{5F0B1D1B-306D-4D7F-AB22-DCF01632B73B}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{B8FEB3F1-D554-4AC2-9E59-F9792F31E8CE}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{B8FEB3F1-D554-4AC2-9E59-F9792F31E8CE}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{B8FEB3F1-D554-4AC2-9E59-F9792F31E8CE}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{B8FEB3F1-D554-4AC2-9E59-F9792F31E8CE}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{DBB955AF-768C-4121-A2A1-30012B9FF417}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{DBB955AF-768C-4121-A2A1-30012B9FF417}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{DBB955AF-768C-4121-A2A1-30012B9FF417}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{DBB955AF-768C-4121-A2A1-30012B9FF417}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+		{3E0AC723-BDE7-45AC-ABD8-B05AA5642EAC}.Debug_Unicode|Win32.ActiveCfg = Debug_Unicode|Win32
+		{3E0AC723-BDE7-45AC-ABD8-B05AA5642EAC}.Debug_Unicode|Win32.Build.0 = Debug_Unicode|Win32
+		{3E0AC723-BDE7-45AC-ABD8-B05AA5642EAC}.Release_Unicode|Win32.ActiveCfg = Release_Unicode|Win32
+		{3E0AC723-BDE7-45AC-ABD8-B05AA5642EAC}.Release_Unicode|Win32.Build.0 = Release_Unicode|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB3028FA-F8EA-4B92-A402-A990870419D8}
+	EndGlobalSection
+EndGlobal

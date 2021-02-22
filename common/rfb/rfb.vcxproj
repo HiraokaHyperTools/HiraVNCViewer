@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug_Unicode|Win32">
+      <Configuration>Debug_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release_Unicode|Win32">
+      <Configuration>Release_Unicode</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5F0B1D1B-306D-4D7F-AB22-DCF01632B73B}</ProjectGuid>
+    <RootNamespace>rfb</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>16.0.30804.86</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <OutDir>.\..\Debug_Unicode\</OutDir>
+    <IntDir>.\..\Debug_Unicode\rfb\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..;../../win;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>rdr/msvcwarning.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>..;../../win;../../vnc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <CompileAs>Default</CompileAs>
+      <ForcedIncludeFiles>rdr/msvcwarning.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0809</Culture>
+    </ResourceCompile>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Blacklist.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CConnection.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CMsgHandler.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CMsgReader.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CMsgReaderV3.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CMsgWriter.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CMsgWriterV3.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="ComparingUpdateTracker.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Configuration.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="ConnParams.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="CSecurityVncAuth.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Cursor.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="d3des.c">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Decoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Encoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="encodings.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="HextileDecoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="HextileEncoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="HTTPServer.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="KeyRemapper.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Logger.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Logger_file.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Logger_stdio.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="LogWriter.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Password.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="PixelBuffer.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="PixelFormat.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="RawDecoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="RawEncoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="Region.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="RREDecoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="RREEncoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SConnection.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="secTypes.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="ServerCore.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SMsgHandler.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SMsgReader.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SMsgReaderV3.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SMsgWriter.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SMsgWriterV3.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SSecurityFactoryStandard.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="SSecurityVncAuth.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="TransImageGetter.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="UpdateTracker.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="util.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="VNCSConnectionST.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="VNCServerST.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="ZRLEDecoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+    <ClCompile Include="ZRLEEncoder.cxx">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">Disabled</Optimization>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug_Unicode|Win32'">EnableFastChecks</BasicRuntimeChecks>
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Release_Unicode|Win32'">MinSpace</Optimization>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Blacklist.h" />
+    <ClInclude Include="CConnection.h" />
+    <ClInclude Include="CMsgHandler.h" />
+    <ClInclude Include="CMsgReader.h" />
+    <ClInclude Include="CMsgReaderV3.h" />
+    <ClInclude Include="CMsgWriter.h" />
+    <ClInclude Include="CMsgWriterV3.h" />
+    <ClInclude Include="ColourCube.h" />
+    <ClInclude Include="ColourMap.h" />
+    <ClInclude Include="ComparingUpdateTracker.h" />
+    <ClInclude Include="Configuration.h" />
+    <ClInclude Include="ConnParams.h" />
+    <ClInclude Include="CSecurity.h" />
+    <ClInclude Include="CSecurityNone.h" />
+    <ClInclude Include="CSecurityVncAuth.h" />
+    <ClInclude Include="Cursor.h" />
+    <ClInclude Include="d3des.h" />
+    <ClInclude Include="Decoder.h" />
+    <ClInclude Include="Encoder.h" />
+    <ClInclude Include="encodings.h" />
+    <ClInclude Include="Exception.h" />
+    <ClInclude Include="hextileConstants.h" />
+    <ClInclude Include="hextileDecode.h" />
+    <ClInclude Include="HextileDecoder.h" />
+    <ClInclude Include="hextileEncode.h" />
+    <ClInclude Include="HextileEncoder.h" />
+    <ClInclude Include="Hostname.h" />
+    <ClInclude Include="HTTPServer.h" />
+    <ClInclude Include="ImageGetter.h" />
+    <ClInclude Include="InputHandler.h" />
+    <ClInclude Include="KeyRemapper.h" />
+    <ClInclude Include="keysymdef.h" />
+    <ClInclude Include="Logger.h" />
+    <ClInclude Include="Logger_file.h" />
+    <ClInclude Include="Logger_stdio.h" />
+    <ClInclude Include="LogWriter.h" />
+    <ClInclude Include="msgTypes.h" />
+    <ClInclude Include="Password.h" />
+    <ClInclude Include="Pixel.h" />
+    <ClInclude Include="PixelBuffer.h" />
+    <ClInclude Include="PixelFormat.h" />
+    <ClInclude Include="RawDecoder.h" />
+    <ClInclude Include="RawEncoder.h" />
+    <ClInclude Include="Rect.h" />
+    <ClInclude Include="Region.h" />
+    <ClInclude Include="rreDecode.h" />
+    <ClInclude Include="RREDecoder.h" />
+    <ClInclude Include="rreEncode.h" />
+    <ClInclude Include="RREEncoder.h" />
+    <ClInclude Include="SConnection.h" />
+    <ClInclude Include="SDesktop.h" />
+    <ClInclude Include="secTypes.h" />
+    <ClInclude Include="ServerCore.h" />
+    <ClInclude Include="SMsgHandler.h" />
+    <ClInclude Include="SMsgReader.h" />
+    <ClInclude Include="SMsgReaderV3.h" />
+    <ClInclude Include="SMsgWriter.h" />
+    <ClInclude Include="SMsgWriterV3.h" />
+    <ClInclude Include="SSecurity.h" />
+    <ClInclude Include="SSecurityFactoryStandard.h" />
+    <ClInclude Include="SSecurityNone.h" />
+    <ClInclude Include="SSecurityVncAuth.h" />
+    <ClInclude Include="Threading.h" />
+    <ClInclude Include="TransImageGetter.h" />
+    <ClInclude Include="transInitTempl.h" />
+    <ClInclude Include="transTempl.h" />
+    <ClInclude Include="TrueColourMap.h" />
+    <ClInclude Include="UpdateTracker.h" />
+    <ClInclude Include="UserPasswdGetter.h" />
+    <ClInclude Include="util.h" />
+    <ClInclude Include="VNCSConnectionST.h" />
+    <ClInclude Include="VNCServer.h" />
+    <ClInclude Include="VNCServerST.h" />
+    <ClInclude Include="zrleDecode.h" />
+    <ClInclude Include="ZRLEDecoder.h" />
+    <ClInclude Include="zrleEncode.h" />
+    <ClInclude Include="ZRLEEncoder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\rdr\rdr.vcxproj">
+      <Project>{24e0c894-0886-49f1-80c0-de306a1cd0c3}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\Xregion\Xregion.vcxproj">
+      <Project>{597421f1-8544-4198-b498-540361a51be0}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
